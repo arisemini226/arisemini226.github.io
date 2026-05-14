@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Social Media Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#F8F9FA',
+                            dark: '#333333',
+                            accent: '#3B82F6',
+                            instagram: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F8F9FA;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ig-card {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .ig-gradient-text {
+            background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .aspect-square-container {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #f1f1f1;
+            position: relative;
+        }
+        .aspect-square-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hover-scale {
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hover-scale:hover {
+            transform: scale(1.1);
+        }
+        .active-heart:active {
+            color: #ef4444;
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div class="w-full max-w-[600px]">
+        <!-- Premium Instagram-style Card -->
+        <article class="bg-white rounded-2xl overflow-hidden ig-card border border-gray-100 transition-all duration-500 hover:shadow-2xl">
+            
+            <!-- Caption Header (User-Requested Placement) -->
+            <div class="p-6 md:p-8">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px]">
+                            <div class="w-full h-full bg-white rounded-full flex items-center justify-center p-[2px]">
+                                <div class="w-full h-full bg-gray-200 rounded-full flex items-center justify-center font-bold text-xs text-gray-500">M</div>
+                            </div>
+                        </div>
+                        <span class="font-display font-semibold text-gray-800 tracking-tight">M11309932</span>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                    </button>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="text-[#333333] leading-relaxed text-[15px] md:text-base">
+                        <span class="font-display font-bold text-lg block mb-1">M11309932</span>
+                        挑戰自我的極限，從清晨的泳池到烈日下的單車，最後在跑道上拼盡全力。鐵人三項不僅是體力的考驗，更是意志力的磨練。每一滴汗水都是進步的印記，這一刻我為自己的堅持感到驕傲！加油，永不放棄，讓我們在終點線見！
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-blue-600 hover:underline cursor-pointer text-sm font-medium">#鐵人三項</span>
+                        <span class="text-blue-600 hover:underline cursor-pointer text-sm font-medium">#挑戰自我</span>
+                        <span class="text-blue-600 hover:underline cursor-pointer text-sm font-medium">#堅持到底</span>
+                        <span class="text-blue-600 hover:underline cursor-pointer text-sm font-medium">#三鐵魂</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Section (Visual) -->
+            <div class="aspect-square-container group">
+                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10"></div>
+                <img src='https://opal.google/board/blobs/86565ce5-4da5-4fba-b1ec-10ed30b45eb2' alt='Ironman Training Visualization' class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Interaction Footer -->
+            <div class="p-6 pt-5">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-5">
+                        <button class="hover-scale text-gray-800 transition-colors hover:text-red-500 active-heart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </button>
+                        <button class="hover-scale text-gray-800 transition-colors hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-4.9a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </button>
+                        <button class="hover-scale text-gray-800 transition-colors hover:text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </div>
+                    <button class="hover-scale text-gray-800 transition-colors hover:text-yellow-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                    </button>
+                </div>
+                
+                <div class="flex items-center gap-2 mb-1">
+                    <div class="flex -space-x-2">
+                        <div class="w-5 h-5 rounded-full bg-blue-100 border-2 border-white flex items-center justify-center text-[8px] font-bold">A</div>
+                        <div class="w-5 h-5 rounded-full bg-red-100 border-2 border-white flex items-center justify-center text-[8px] font-bold">B</div>
+                        <div class="w-5 h-5 rounded-full bg-green-100 border-2 border-white flex items-center justify-center text-[8px] font-bold">C</div>
+                    </div>
+                    <p class="text-sm font-semibold text-gray-700">1,248 位使用者都覺得讚</p>
+                </div>
+                
+                <time class="text-[11px] uppercase tracking-wider text-gray-400 font-display">2 小時前</time>
+            </div>
+        </article>
+
+        <!-- Decorative UI elements -->
+        <div class="mt-8 text-center space-y-4">
+            <p class="text-gray-400 text-sm font-display tracking-widest uppercase">Preview Mode • Clean Social Aesthetic</p>
+            <div class="flex justify-center gap-4">
+                <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300 animate-pulse-slow"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple interactive script for the like button
+        const heartBtn = document.querySelector('.active-heart');
+        let liked = false;
+        
+        heartBtn.addEventListener('click', () => {
+            liked = !liked;
+            if (liked) {
+                heartBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+            } else {
+                heartBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
+                heartBtn.classList.remove('text-red-500');
+            }
+        });
+    </script>
+</body>
+</html>
