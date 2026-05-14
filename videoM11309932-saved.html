@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比基尼鐵人三項：歷史、賽制與社會觀點</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        sunset: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                        },
+                        sand: '#fdf6e3'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0284c7 0%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body {
+            background-color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .bento-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800">
+
+    <!-- Hero Section / Infographic Top -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center pt-12 pb-24 px-6 overflow-hidden">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute top-0 left-0 w-full h-full -z-10 opacity-20">
+            <div class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-ocean-400 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-[10%] left-[-5%] w-80 h-80 bg-sunset-400 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="max-w-6xl w-full text-center mb-16 animate-fade-in-up">
+            <h1 class="font-display font-800 text-5xl md:text-7xl mb-6 tracking-tight">
+                <span class="gradient-text">Bikini Triathlon</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed">
+                比基尼鐵人三項：歷史、賽制與社會觀點分析
+            </p>
+        </div>
+
+        <!-- Infographic Section -->
+        <div class="max-w-6xl w-full grid grid-cols-1 gap-8 animate-fade-in-up" style="animation-delay: 0.2s;">
+            <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.01]">
+                <img src='https://opal.google/board/blobs/03a9f863-4bd9-4319-89bf-0fba7184fae2' alt='Infographic' class="w-full h-auto object-cover" />
+            </div>
+
+            <!-- Summary Bento Grid -->
+            <div class="bento-grid mt-8">
+                <div class="glass-card p-8 rounded-3xl col-span-2 hover:bg-white transition-all">
+                    <div class="text-ocean-600 mb-4 font-display font-bold text-lg uppercase tracking-widest">Definition</div>
+                    <h3 class="text-2xl font-bold mb-3">定義與雙重意涵</h3>
+                    <p class="text-slate-600 leading-relaxed">包含正式女子推廣賽事，以及因兩截式高衩鐵三服引發的社群文化討論。</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:bg-white transition-all">
+                    <div class="text-sunset-500 mb-4 font-display font-bold text-lg uppercase tracking-widest">History</div>
+                    <h3 class="text-2xl font-bold mb-3">歷史起源</h3>
+                    <p class="text-slate-600 leading-relaxed">可追溯至古羅馬壁畫，現代則結合海灘文化與女性賦權。</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:bg-white transition-all">
+                    <div class="text-ocean-600 mb-4 font-display font-bold text-lg uppercase tracking-widest">Rules</div>
+                    <h3 class="text-2xl font-bold mb-3">賽制規範</h3>
+                    <p class="text-slate-600 leading-relaxed">遵循 World Triathlon 規範，多採半程或迷你鐵人距離。</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl hover:bg-white transition-all">
+                    <div class="text-sunset-500 mb-4 font-display font-bold text-lg uppercase tracking-widest">Conflict</div>
+                    <h3 class="text-2xl font-bold mb-3">社會爭議</h3>
+                    <p class="text-slate-600 leading-relaxed">以「阿爽」事件為首，引發功能性與大眾觀感的專業辯論。</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl col-span-3 hover:bg-white transition-all">
+                    <div class="text-ocean-600 mb-4 font-display font-bold text-lg uppercase tracking-widest">Sociology</div>
+                    <h3 class="text-2xl font-bold mb-3">核心美學：身體是工具而非裝飾品</h3>
+                    <p class="text-slate-600 leading-relaxed">強調身體自主權與自信，倡導運動競技帶來的自尊感提升，反對過度性化標籤。</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Video Section / Middle -->
+    <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 tracking-tight">動態美學展示</h2>
+                <div class="h-1 w-20 bg-sunset-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-slate-400">展示專業運動員在陽光海灘場景中的動態表現，體現賽服的功能性設計。</p>
+            </div>
+            
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-ocean-400 to-sunset-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                <div class="relative rounded-xl overflow-hidden bg-black shadow-2xl aspect-video">
+                    <video src='https://opal.google/board/blobs/07448dbd-2c20-4c2a-8b25-73ce30ca98da' class="w-full h-full object-cover" controls playsinline></video>
+                </div>
+            </div>
+
+            <!-- Audio Player Component -->
+            <div class="mt-12 glass-card bg-white/10 border-white/10 p-6 rounded-2xl flex items-center gap-6">
+                <div class="bg-sunset-500 p-4 rounded-full shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                    </svg>
+                </div>
+                <div class="flex-grow">
+                    <p class="font-bold text-lg mb-1">背景音樂：陽光動能</p>
+                    <audio src='https://opal.google/board/blobs/acee3dee-b363-44d4-8a61-5b00d6c8dbc3' controls class="w-full h-8 opacity-70"></audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Section / Bottom -->
+    <main class="py-24 px-6 max-w-4xl mx-auto">
+        <article class="prose prose-slate lg:prose-xl max-w-none">
+            <h2 class="text-4xl font-bold text-slate-900 border-l-8 border-ocean-600 pl-6 mb-12">深度報告：歷史、賽制與觀點</h2>
+            
+            <section class="mb-16">
+                <h3 class="text-2xl font-bold text-ocean-900 mb-6 flex items-center">
+                    <span class="bg-ocean-100 text-ocean-600 w-10 h-10 rounded-lg flex items-center justify-center mr-4 text-sm">01</span>
+                    定義、歷史背景與目的
+                </h3>
+                <div class="space-y-4 text-slate-600 leading-relaxed text-lg">
+                    <p>比基尼鐵人三項 (Bikini Triathlon) 在當代大眾視野中具備雙重層面：其一是指正式的女子鐵人三項推廣賽事；其二則是指參賽者穿著兩截式高衩鐵三服 (Tri-suits) 參賽，進而引發大眾及社群媒體廣泛討論的文化現象。</p>
+                    <p>廣義上「穿著比基尼運動」的歷史起源可追溯至古羅馬時期。在西西里島卡薩爾羅馬別墅 (Villa Romana del Casale) 的壁畫中，已有女性穿著類似比基尼的服裝進行跑步、舉重等競技活動。現代的比基尼鐵人三項並非由單一機構創立的國際賽事，而是多由地方組織或運動品牌發起，常與夏季、海灘文化緊密結合。此類賽事的主要目的在於打破大眾對於鐵人三項的高門檻恐懼感，透過輕鬆的著裝主題降低女性參與難度，提升賽事的趣味性與親和力。</p>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="text-2xl font-bold text-ocean-900 mb-6 flex items-center">
+                    <span class="bg-ocean-100 text-ocean-600 w-10 h-10 rounded-lg flex items-center justify-center mr-4 text-sm">02</span>
+                    賽事規則與距離
+                </h3>
+                <div class="bg-ocean-50 p-8 rounded-3xl border border-ocean-100">
+                    <p class="mb-6">基本遵循國際鐵人三項聯盟 (World Triathlon) 的規範，參賽者需連續經過轉換區完成游泳、自行車與路跑。常見賽制如下：</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm">
+                            <h4 class="font-bold text-ocean-600 mb-2">半程鐵人 (Sprint)</h4>
+                            <ul class="text-sm space-y-1 text-slate-500">
+                                <li>游泳：750 公尺</li>
+                                <li>自行車：20 公里</li>
+                                <li>路跑：5 公里</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm">
+                            <h4 class="font-bold text-ocean-600 mb-2">迷你鐵人 (Super Sprint)</h4>
+                            <ul class="text-sm space-y-1 text-slate-500">
+                                <li>游泳：400 公尺</li>
+                                <li>自行車：10 公里</li>
+                                <li>路跑：2.5 公里</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-sm italic text-slate-500">※ 專業選手多穿著專門設計的兩截式鐵三服，具備快乾、減震襯墊及減少摩擦等高度專業功能。</p>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="text-2xl font-bold text-ocean-900 mb-6 flex items-center">
+                    <span class="bg-ocean-100 text-ocean-600 w-10 h-10 rounded-lg flex items-center justify-center mr-4 text-sm">03</span>
+                    近年重要事件與爭議
+                </h3>
+                <div class="relative pl-8 border-l-2 border-slate-200 space-y-12">
+                    <div>
+                        <div class="absolute w-4 h-4 bg-sunset-500 rounded-full -left-[9px] top-2"></div>
+                        <h4 class="font-bold text-xl mb-2 text-slate-800">2022 | 「阿爽」馮競爽事件</h4>
+                        <p class="text-slate-600">中國國家級選手因穿著高衩兩截式賽服引發網民熱議。經科普，該服裝實為防止腿部受阻與減少曬痕的標準專業設計。</p>
+                    </div>
+                    <div>
+                        <div class="absolute w-4 h-4 bg-ocean-400 rounded-full -left-[9px] top-2"></div>
+                        <h4 class="font-bold text-xl mb-2 text-slate-800">2025 | IRONMAN 70.3 Kenting</h4>
+                        <p class="text-slate-600">台灣墾丁國際賽事，以「南島日光」為主題，展現健康體態，成為運動網紅與攝影愛好者的重要指標場合。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="text-2xl font-bold text-ocean-900 mb-6 flex items-center">
+                    <span class="bg-ocean-100 text-ocean-600 w-10 h-10 rounded-lg flex items-center justify-center mr-4 text-sm">04</span>
+                    社會觀點：身體自主、美學與專業性
+                </h3>
+                <div class="bg-slate-50 p-8 rounded-3xl text-slate-600 leading-relaxed">
+                    <p class="mb-4">現代運動領域強調「身體是工具而非裝飾品」。選手選擇簡潔、清涼的服裝是基於散熱、防曬痕等功能性需求。雖然社會觀感上仍存在性化與專業化的衝突，但運動圈內多持支持態度，認為這體現了專業的運動美學。</p>
+                    <div class="border-t border-slate-200 mt-6 pt-6 italic text-ocean-600">
+                        "研究指出：若將焦點轉向身體所能達成的競技成就，能顯著提升女性的自尊感。"
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h3 class="text-2xl font-bold text-ocean-900 mb-6">結論</h3>
+                <p class="text-lg text-slate-700 leading-relaxed bg-gradient-to-r from-ocean-50 to-transparent p-6 rounded-xl border-l-4 border-sunset-400">
+                    比基尼鐵人三項不僅是鼓勵女性投入運動的推廣形式，更是檢視現代社會對女性身體自主權與運動專業性看法的試金石。社會大眾應跨越過度性化與物化的偏見，將焦點回歸於運動員的競技表現與健康自信的美學展現。
+                </p>
+            </section>
+
+            <section class="pt-12 border-t border-slate-200">
+                <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">引用文獻來源</h3>
+                <ul class="text-sm text-slate-500 space-y-2 list-decimal list-inside">
+                    <li>國際鐵人三項聯盟 (World Triathlon) 官方賽事規則與距離規範。</li>
+                    <li>馮競爽（阿爽）賽服爭議相關新聞報導與專業賽服功能解析 (2022-2024)。</li>
+                    <li>IRONMAN 70.3 Kenting 墾丁國際鐵人三項賽事官方資訊 (2025)。</li>
+                    <li>運動心理學與社會學專刊：女性運動員身體自主權、自我客體化及身體自信之相關研究。</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <!-- Student Info & Custom Footer -->
+    <div class="py-16 bg-white border-t border-slate-100 text-center">
+        <div class="max-w-xs mx-auto mb-4 p-4 bg-slate-50 rounded-2xl">
+            <div class="text-xs text-slate-400 mb-1">STUDENT ID</div>
+            <div class="font-display font-bold text-slate-800">M11309932</div>
+        </div>
+        <div class="text-slate-600 text-lg">
+            【主題探索報告】by <span class="italic text-red-600 font-bold">Famidoc Chang</span>
+        </div>
+    </div>
+
+</body>
+</html>
