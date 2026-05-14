@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【鐵人三項大解密】鋼鐵意志的覺醒 - M11309932</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        titan: {
+                            950: '#0a0a0a',
+                            900: '#1a120b',
+                            800: '#3c2a21',
+                            700: '#543d2c',
+                            500: '#9a3412', // Blood red/rust
+                            400: '#ea580c',
+                            200: '#e7e5e4',
+                        },
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e7e5e4;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(26, 18, 11, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(154, 52, 18, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to bottom right, #f97316, #9a3412, #450a0a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .shingeki-border {
+            position: relative;
+        }
+        .shingeki-border::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #9a3412, transparent);
+        }
+
+        .hero-mask {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+
+        .bento-item {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-item:hover {
+            transform: scale(1.02);
+            border-color: #ea580c;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #543d2c; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9a3412; }
+    </style>
+</head>
+<body class="font-body selection:bg-titan-500 selection:text-white">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 h-1 bg-titan-500 z-50 transition-all duration-300" id="progress-bar" style="width: 0%"></div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-titan-950 via-transparent to-black/60 z-10"></div>
+            <div class="w-full h-full hero-mask">
+                <img src='https://opal.google/board/blobs/dc0dfb6a-d557-42aa-abe3-c4a1e04881b8' alt='Attack on Titan Triathlon' class="w-full h-full object-cover opacity-80 scale-105 animate-pulse-slow" />
+            </div>
+        </div>
+
+        <div class="relative z-20 container mx-auto px-6 text-center">
+            <div class="inline-block px-4 py-1 mb-6 border border-titan-500 text-titan-400 text-xs tracking-[0.3em] uppercase bg-titan-950/80 backdrop-blur-sm">
+                Student ID: M11309932
+            </div>
+            <h1 class="font-display font-black text-5xl md:text-8xl mb-6 tracking-tighter leading-none">
+                <span class="block text-white">鐵人三項</span>
+                <span class="text-gradient">大解密</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-titan-200 text-lg md:text-xl font-light leading-relaxed mb-10 opacity-90">
+                不只是運動，而是一場跟自己玩真的「自虐」浪漫。這不單是體力的消耗，更是當代的西西弗斯式修行。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#content" class="px-8 py-4 bg-titan-500 hover:bg-titan-400 text-white font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-titan-500/20">
+                    深入調查兵團
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <main id="content" class="container mx-auto px-6 py-24">
+        
+        <!-- Intro Quote Section -->
+        <section class="max-w-4xl mx-auto mb-32 text-center">
+            <div class="glass-card p-12 rounded-2xl relative">
+                <span class="absolute top-0 left-10 -translate-y-1/2 text-8xl text-titan-500/20 font-display">“</span>
+                <p class="text-2xl md:text-3xl leading-relaxed font-light italic">
+                    「在現代都市生活的縫隙中，人類總在尋找某種方式來證明自己『還活著』。」
+                </p>
+            </div>
+        </section>
+
+        <!-- Bento Grid: The 3 Disciplines -->
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-display font-black tracking-widest uppercase text-titan-400">01. 三種願望一次滿足</h2>
+                <div class="h-[2px] flex-grow bg-gradient-to-r from-titan-500 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Transition Area - The "4th" -->
+                <div class="md:col-span-2 glass-card p-8 rounded-2xl border-l-4 border-l-titan-500 flex flex-col justify-center bento-item">
+                    <h3 class="text-2xl font-bold mb-4 text-white">關鍵環節：T1 & T2 轉換區</h3>
+                    <p class="text-titan-200 leading-relaxed">
+                        心跳狂飆的情況下，優雅（或狼狽）地脫掉防寒衣、戴上安全帽、換上跑鞋。
+                        <span class="text-titan-400 font-bold block mt-2">在轉換區掙扎時，你會對「換衣服是一門藝術」有深刻體悟。</span>
+                    </p>
+                </div>
+
+                <!-- Levels Grid -->
+                <div class="glass-card p-8 rounded-2xl bento-item bg-titan-900/50">
+                    <span class="text-titan-500 font-display font-black text-4xl">0.75</span>
+                    <h4 class="font-bold text-xl mt-2">半程小鐵人</h4>
+                    <p class="text-sm text-titan-400 mt-2">適合想探頭看看「新手村」長什麼樣的使用者。</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl bento-item border-b-4 border-b-titan-500">
+                    <span class="text-titan-500 font-display font-black text-4xl">1.5 / 40</span>
+                    <h4 class="font-bold text-xl mt-2">標鐵（奧運標準）</h4>
+                    <p class="text-sm text-titan-400 mt-2">體能的分水嶺，考驗你是否具備合格運動愛好者的自律。</p>
+                </div>
+
+                <div class="md:col-span-2 glass-card p-8 rounded-2xl bento-item relative overflow-hidden group">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-titan-500/10 rounded-full blur-3xl group-hover:bg-titan-500/20 transition-all"></div>
+                    <span class="text-titan-500 font-display font-black text-5xl">226 全鐵</span>
+                    <h4 class="font-bold text-2xl mt-2">Ironman 終極長征</h4>
+                    <p class="text-titan-200 mt-4 leading-relaxed">
+                        3.8km 游泳 / 180km 自行車 / 42.2km 路跑。這是挑戰生理極限，也是邁向傳說中「非人類」等級的門票。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-[2px] flex-grow bg-gradient-to-l from-titan-500 to-transparent"></div>
+                <h2 class="text-3xl font-display font-black tracking-widest uppercase text-titan-400 text-right">02. 考古時間：酒後賭注</h2>
+            </div>
+
+            <div class="relative">
+                <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-titan-800 hidden md:block"></div>
+                
+                <!-- Timeline 1 -->
+                <div class="relative grid md:grid-cols-2 gap-12 mb-16">
+                    <div class="md:text-right">
+                        <div class="inline-block px-4 py-1 bg-titan-500 text-xs font-bold rounded-full mb-4">1920s FRANCE</div>
+                        <h3 class="text-2xl font-bold mb-4">Les Trois Sports</h3>
+                        <p class="text-titan-200">早在上世紀初的法國，就已經有了這種多項運動結合的雛形，算是一種超前部署。</p>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </div>
+
+                <!-- Timeline 2 -->
+                <div class="relative grid md:grid-cols-2 gap-12 mb-16">
+                    <div class="hidden md:block"></div>
+                    <div>
+                        <div class="inline-block px-4 py-1 bg-titan-500 text-xs font-bold rounded-full mb-4">1978 HAWAII</div>
+                        <h3 class="text-2xl font-bold mb-4">夏威夷的男人之爭</h3>
+                        <p class="text-titan-200">一場酒吧裡的爭論：游泳、單車還是馬拉松選手最厲害？在酒精與自尊催化下，現代 Ironman 誕生了。</p>
+                    </div>
+                </div>
+
+                <!-- Timeline 3 -->
+                <div class="relative grid md:grid-cols-2 gap-12">
+                    <div class="md:text-right">
+                        <div class="inline-block px-4 py-1 bg-titan-500 text-xs font-bold rounded-full mb-4">1989 & 2000</div>
+                        <h3 class="text-2xl font-bold mb-4">從小眾到奧運殿堂</h3>
+                        <p class="text-titan-200">ITU 成立到悉尼奧運正式納入，鐵人三項完成了驚人的華麗變身。</p>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social/Culture Section -->
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-display font-black tracking-widest uppercase text-titan-400">03. 中產階級的新高球</h2>
+                <div class="h-[2px] flex-grow bg-gradient-to-r from-titan-500 to-transparent"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-10 rounded-3xl border-t-2 border-t-titan-500 animate-float">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <svg class="w-6 h-6 text-titan-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>
+                        精英進步論
+                    </h3>
+                    <p class="text-titan-200 leading-relaxed">
+                        在充滿變數的商業世界裡，訓練提供了極其稀缺的「回饋機制」：只要你投入時間，你的心跳就會下降，你的瓦數就會提升。這是一種對自我掌控感的完美追求。
+                    </p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl border-b-2 border-b-titan-500">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <svg class="w-6 h-6 text-titan-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7.536 5.879a1 1 0 001.415 0 3 3 0 014.242 0 1 1 0 001.415-1.415 5 5 0 00-7.072 0 1 1 0 000 1.415z"></path></svg>
+                        數據狂人的樂園
+                    </h3>
+                    <p class="text-titan-200 leading-relaxed">
+                        心率、乳酸、連續血糖監測，如果沒戴上一支好錶，這場運動彷彿就失去了存在感。目前的社群核心在於「完賽即英雄」，一句「Anything is Possible」成了抗衡中年危機最響亮的雞湯。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controversies/Medical Section -->
+        <section class="mb-32 bg-titan-900/30 -mx-6 px-6 py-20 border-y border-titan-800">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-display font-black text-center mb-16 tracking-tight text-white">秘密真心話：<span class="text-titan-500">光鮮後的陰影</span></h2>
+                
+                <div class="space-y-12">
+                    <div class="flex gap-6 items-start">
+                        <div class="text-titan-500 font-display text-4xl font-black">01</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">金錢遊戲的質疑</h4>
+                            <p class="text-titan-200">破十萬甚至三十萬的低風阻車架、碳板鞋、防寒衣。這到底是體力的競爭，還是財力的較量？這項運動蒙上了一層菁英主義的色彩。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="text-titan-500 font-display text-4xl font-black">02</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">健康風險與心臟負荷</h4>
+                            <p class="text-titan-200">追求極致耐力的過程，是否在透支心臟？長期高強度負荷可能導致心肌肥大。游泳階段偶發的運動猝死，也是不容忽視的風險。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="text-titan-500 font-display text-4xl font-black">03</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">科技外掛的哲學</h4>
+                            <p class="text-titan-200">科技如碳板鞋的介入，是否模糊了人類純粹體能的邊界？在追求「更快」的同時，我們不得不停下來思考這些哲學命題。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Section -->
+        <section class="mb-32">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-display font-black mb-8 leading-tight">預見未來：<br/><span class="text-titan-500">鋼鐵人真的會出現？</span></h2>
+                    <p class="text-titan-200 text-lg mb-8 leading-relaxed">
+                        科技與人性將進一步融合。客廳即賽場，虛擬賽事正夯；AI 教練將提供生化人等級的訓練建議。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-4 border border-titan-800 bg-titan-900/50 rounded-lg flex items-center gap-4">
+                            <div class="w-2 h-2 bg-titan-500 rounded-full"></div>
+                            <span>虛擬賽事與全球即時競技</span>
+                        </div>
+                        <div class="p-4 border border-titan-800 bg-titan-900/50 rounded-lg flex items-center gap-4">
+                            <div class="w-2 h-2 bg-titan-500 rounded-full"></div>
+                            <span>永續發展：回收獎牌與環境友善</span>
+                        </div>
+                        <div class="p-4 border border-titan-800 bg-titan-900/50 rounded-lg flex items-center gap-4">
+                            <div class="w-2 h-2 bg-titan-500 rounded-full"></div>
+                            <span>混合接力：更短、更強、更刺激</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square glass-card rounded-full flex items-center justify-center p-12 relative z-10">
+                        <div class="text-center">
+                            <span class="block text-6xl mb-4">🤖</span>
+                            <h4 class="text-2xl font-bold">AI + HUMAN</h4>
+                            <p class="text-titan-400 mt-2">Next Evolution</p>
+                        </div>
+                    </div>
+                    <!-- Decorative Circles -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-titan-500/20 rounded-full animate-pulse"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] border border-titan-500/10 rounded-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Quote / Call to Action -->
+        <section class="max-w-4xl mx-auto py-20 px-10 glass-card rounded-[3rem] text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <img src='https://opal.google/board/blobs/dc0dfb6a-d557-42aa-abe3-c4a1e04881b8' alt='bg' class="w-full h-full object-cover" />
+            </div>
+            <div class="relative z-10">
+                <h3 class="text-3xl font-bold mb-8">💡 小結語</h3>
+                <p class="text-xl md:text-2xl leading-relaxed mb-10 text-titan-200">
+                    所謂的鋼鐵意志，不過是在你想放棄的每一秒，<br class="hidden md:block"/>
+                    <span class="text-white font-black underline decoration-titan-500 underline-offset-8 italic">再多堅持了一次。</span>
+                </p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <button class="px-10 py-4 bg-white text-titan-950 font-black rounded-full hover:bg-titan-200 transition-colors">
+                        收編第一雙跑鞋
+                    </button>
+                    <button class="px-10 py-4 border-2 border-titan-500 text-white font-black rounded-full hover:bg-titan-500/10 transition-colors">
+                        學習脫掉防寒衣
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Scroll Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // Subtle parallax effect on hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('.hero-mask img');
+            heroImg.style.transform = `scale(1.05) translateY(${scrolled * 0.15}px)`;
+        });
+    </script>
+</body>
+</html>
+
